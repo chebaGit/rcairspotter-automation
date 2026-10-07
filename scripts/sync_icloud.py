@@ -53,29 +53,45 @@ def partition_from_token(token):
         n = base62_to_int(token[1:3])
     return f"{n:02d}"
 
-def post_json(url, payload):
+def post_json(url, payload, attempts=3, timeout=180):
     body = json.dumps(payload).encode("utf-8")
-    req = request.Request(
-        url,
-        data=body,
-        method="POST",
-        headers={
-            "Content-Type": "text/plain",
-            "Cache-Control": "no-cache",
-            "Pragma": "no-cache",
-            "User-Agent": USER_AGENT,
-        },
-    )
-    try:
-        with request.urlopen(req, timeout=45) as resp:
-            return resp.status, dict(resp.headers), json.loads(resp.read().decode("utf-8"))
-    except error.HTTPError as exc:
-        raw = exc.read().decode("utf-8", errors="replace")
+    last_exc = None
+
+    for attempt in range(1, attempts + 1):
+        req = request.Request(
+            url,
+            data=body,
+            method="POST",
+            headers={
+                "Content-Type": "text/plain",
+                "Cache-Control": "no-cache",
+                "Pragma": "no-cache",
+                "Connection": "close",
+                "User-Agent": USER_AGENT,
+            },
+        )
         try:
-            data = json.loads(raw)
-        except Exception:
-            data = {}
-        return exc.code, dict(exc.headers), data
+            print(f"Consultando iCloud (intento {attempt}/{attempts})...")
+            with request.urlopen(req, timeout=timeout) as resp:
+                raw = resp.read().decode("utf-8")
+                return resp.status, dict(resp.headers), json.loads(raw)
+        except error.HTTPError as exc:
+            raw = exc.read().decode("utf-8", errors="replace")
+            try:
+                data = json.loads(raw)
+            except Exception:
+                data = {}
+            # Los HTTP explícitos deben devolverse para que fetch_stream
+            # pueda tratar redirecciones/respuestas de Apple.
+            return exc.code, dict(exc.headers), data
+        except (TimeoutError, socket.timeout, error.URLError) as exc:
+            last_exc = exc
+            if attempt < attempts:
+                wait = attempt * 10
+                print(f"iCloud tardó demasiado. Reintentando en {wait}s...")
+                time.sleep(wait)
+
+    raise RuntimeError(f"No se pudo leer iCloud tras {attempts} intentos: {last_exc}")
 
 def fetch_stream(token):
     partition = partition_from_token(token)
