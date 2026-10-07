@@ -186,6 +186,8 @@ def main():
     queue = [
         {
             "photo_guid": p["photo_guid"],
+            "batch_guid": p.get("batch_guid"),
+            "batch_date_created": p.get("batch_date_created"),
             "date_created": p.get("date_created"),
             "caption": p.get("caption", ""),
             "width": p.get("width"),
