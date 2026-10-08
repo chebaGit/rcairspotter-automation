@@ -1,5 +1,5 @@
 name: Fetch iCloud preview batch
-# batch21
+# batch22
 
 on:
   workflow_dispatch:
