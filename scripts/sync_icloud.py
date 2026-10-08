@@ -207,7 +207,7 @@ def main():
 
     if dated:
         newest_date = max(dt for dt, _ in dated)
-        recent_cutoff = newest_date - timedelta(days=730)
+        recent_cutoff = newest_date - timedelta(days=365)
 
         for dt, p in dated:
             if dt >= recent_cutoff:
