@@ -14,7 +14,7 @@ from fetch_next_photo import (
 
 BATCH_DIR = ROOT / "preview_batch"
 MANIFEST_PATH = BATCH_DIR / "manifest.json"
-BATCH_SIZE = 10
+BATCH_SIZE = 20
 
 
 def main():
@@ -66,7 +66,7 @@ def main():
             "status": "ready_for_review",
         })
 
-        print(f"{index:02d}/10 listo: {filename}")
+        print(f"{index:02d}/{BATCH_SIZE} listo: {filename}")
 
     MANIFEST_PATH.write_text(
         json.dumps(
