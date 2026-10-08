@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 import json
 import sys
-from datetime import datetime, timezone
+import random
+import socket
+import time
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from urllib import request, error
 
@@ -183,6 +186,75 @@ def main():
             item["status"] = "published"
 
     available = [p for p in inventory if p["photo_guid"] not in published_ids]
+
+    # Curaduría temporal:
+    # - 80% desde el archivo reciente (últimos 24 meses respecto a la foto más nueva)
+    # - 20% desde el archivo histórico
+    # La selección cambia diariamente, pero permanece estable dentro del mismo día.
+    dated = []
+    for p in available:
+        raw_date = p.get("date_created")
+        if not raw_date:
+            continue
+        try:
+            dt = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
+            dated.append((dt, p))
+        except ValueError:
+            continue
+
+    recent_pool = []
+    historical_pool = []
+
+    if dated:
+        newest_date = max(dt for dt, _ in dated)
+        recent_cutoff = newest_date - timedelta(days=730)
+
+        for dt, p in dated:
+            if dt >= recent_cutoff:
+                recent_pool.append(p)
+            else:
+                historical_pool.append(p)
+
+    undated = [p for p in available if not p.get("date_created")]
+    historical_pool.extend(undated)
+
+    # Si hay muy pocas fotos recientes, usamos como respaldo el 25% más nuevo.
+    if len(recent_pool) < min(queue_size, max(5, queue_size // 2)):
+        newest_first = sorted(
+            available,
+            key=lambda p: (p.get("date_created") or ""),
+            reverse=True,
+        )
+        fallback_count = max(queue_size, max(1, len(newest_first) // 4))
+        recent_pool = newest_first[:fallback_count]
+        recent_ids = {p["photo_guid"] for p in recent_pool}
+        historical_pool = [p for p in available if p["photo_guid"] not in recent_ids]
+
+    rng = random.Random(datetime.now(timezone.utc).strftime("%Y-%m-%d"))
+    rng.shuffle(recent_pool)
+    rng.shuffle(historical_pool)
+
+    recent_target = round(queue_size * 0.8)
+    historical_target = queue_size - recent_target
+
+    selected = recent_pool[:recent_target]
+    selected_ids = {p["photo_guid"] for p in selected}
+
+    selected += [
+        p for p in historical_pool
+        if p["photo_guid"] not in selected_ids
+    ][:historical_target]
+
+    # Completar la cola si alguno de los dos grupos no alcanza.
+    if len(selected) < queue_size:
+        selected_ids = {p["photo_guid"] for p in selected}
+        leftovers = [
+            p for p in available
+            if p["photo_guid"] not in selected_ids
+        ]
+        rng.shuffle(leftovers)
+        selected.extend(leftovers[:queue_size - len(selected)])
+
     queue = [
         {
             "photo_guid": p["photo_guid"],
@@ -195,8 +267,13 @@ def main():
             "best_derivative": p.get("best_derivative"),
             "partition": p.get("partition"),
             "status": "pending",
+            "archive_bucket": (
+                "recent"
+                if p["photo_guid"] in {x["photo_guid"] for x in recent_pool}
+                else "historical"
+            ),
         }
-        for p in available[:queue_size]
+        for p in selected
     ]
 
     stamp = now_iso()
