@@ -1,0 +1,6 @@
+{
+  "post_id": "001",
+  "type": "carousel",
+  "selected_indices": [10, 5, 8, 2, 3],
+  "labels": ["cover", "profile", "action", "pilot", "context"]
+}
