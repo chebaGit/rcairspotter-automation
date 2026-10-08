@@ -1,5 +1,5 @@
 name: Fetch iCloud preview batch
-# batch22
+# stage-review-queue
 
 on:
   workflow_dispatch:
@@ -31,20 +31,38 @@ jobs:
       - name: Fetch preview batch
         run: python scripts/fetch_preview_batch.py
 
-      - name: Stage current post
+      - name: Stage review queue
         run: |
-          mkdir -p public_media/002
-          cp preview_batch/02_C356797B-6569-4CEB-ABBF-FA67F93B18B5.jpg public_media/002/01_current.jpg
+          mkdir -p public_media/review_queue
+          cp preview_batch/01_*.jpg public_media/review_queue/003.jpg
+          cp preview_batch/03_*.jpg public_media/review_queue/004.jpg
+          cp preview_batch/04_*.jpg public_media/review_queue/005.jpg
+          cp preview_batch/05_*.jpg public_media/review_queue/006.jpg
+          cp preview_batch/06_*.jpg public_media/review_queue/007.jpg
+          cp preview_batch/07_*.jpg public_media/review_queue/008.jpg
+          cp preview_batch/08_*.jpg public_media/review_queue/009.jpg
+          cp preview_batch/09_*.jpg public_media/review_queue/010.jpg
+          cp preview_batch/10_*.jpg public_media/review_queue/011.jpg
+          cp preview_batch/11_*.jpg public_media/review_queue/012.jpg
+          cp preview_batch/12_*.jpg public_media/review_queue/013.jpg
+          cp preview_batch/13_*.jpg public_media/review_queue/014.jpg
+          cp preview_batch/14_*.jpg public_media/review_queue/015.jpg
+          cp preview_batch/15_*.jpg public_media/review_queue/016.jpg
+          cp preview_batch/16_*.jpg public_media/review_queue/017.jpg
+          cp preview_batch/18_*.jpg public_media/review_queue/018.jpg
+          cp preview_batch/20_*.jpg public_media/review_queue/019.jpg
+          cp preview_batch/21_*.jpg public_media/review_queue/020.jpg
+          cp preview_batch/22_*.jpg public_media/review_queue/021.jpg
 
-      - name: Commit current media
+      - name: Commit review media
         run: |
           git config user.name "rcairspotter-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add public_media/002
+          git add public_media/review_queue
           if git diff --cached --quiet; then
             echo "No media changes."
           else
-            git commit -m "media: stage current post 002"
+            git commit -m "media: stage 19-post review queue"
             git push
           fi
 
