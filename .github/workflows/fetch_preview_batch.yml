@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   fetch:
@@ -21,6 +21,27 @@ jobs:
 
       - name: Fetch preview batch
         run: python scripts/fetch_preview_batch.py
+
+      - name: Stage selected carousel
+        run: |
+          mkdir -p public_media/001
+          cp preview_batch/10_D0A515AC-BE82-416A-9F7B-AFC70ADB343C.jpg public_media/001/01_cover.jpg
+          cp preview_batch/05_26BD7193-E44A-42A9-A961-C347BF126951.jpg public_media/001/02_profile.jpg
+          cp preview_batch/08_AD7F117B-A36B-43A5-BD2D-51A55C055ACA.jpg public_media/001/03_action.jpg
+          cp preview_batch/02_FA3D3C62-CB68-4CEA-BF59-C3BF6E2FCE76.jpg public_media/001/04_pilot.jpg
+          cp preview_batch/03_4125079F-09C9-4B0E-B30C-E1AC6DB953E5.jpg public_media/001/05_context.jpg
+
+      - name: Commit selected media
+        run: |
+          git config user.name "rcairspotter-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public_media/001
+          if git diff --cached --quiet; then
+            echo "No media changes."
+          else
+            git commit -m "media: stage post 001 carousel"
+            git push
+          fi
 
       - name: Upload preview batch
         uses: actions/upload-artifact@v4
