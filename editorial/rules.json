@@ -1,0 +1,25 @@
+{
+  "editorial_rules": {
+    "copy_style": "date_location_credit_only",
+    "location": "Club de Aeromodelos de Chile — CACh",
+    "photo_credit": "@chebainstagram",
+    "recent_window_months": 12,
+    "recent_share": 0.8,
+    "historical_share": 0.2,
+    "same_aircraft": {
+      "allow_consecutive_posts": false,
+      "minimum_gap_posts_when_possible": 4
+    },
+    "same_session": {
+      "avoid_consecutive_posts": true,
+      "prefer_carousel_if_multiple_strong_images": true
+    },
+    "diversity_checks_before_scheduling": [
+      "aircraft_model_or_visual_cluster",
+      "session_or_batch",
+      "pilot_or_subject",
+      "aircraft_type",
+      "orientation_and_visual_style"
+    ]
+  }
+}
