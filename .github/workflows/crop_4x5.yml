@@ -1,0 +1,132 @@
+name: Build 4x5 Instagram crops
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/crop_4x5.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  crop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Pillow
+        run: pip install pillow
+
+      - name: Build subject-aware crops
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps, ImageDraw
+
+          root = Path("public_media/review_queue")
+          out = Path("public_media/cropped_4x5")
+          out.mkdir(parents=True, exist_ok=True)
+
+          # Punto focal manual (x,y) en proporción de la imagen.
+          # Permite proteger avión/piloto y evitar un crop ciego al centro.
+          focus = {
+              "003": (0.50, 0.48),
+              "004": (0.53, 0.48),
+              "005": (0.53, 0.48),
+              "006": (0.47, 0.51),
+              "007": (0.46, 0.50),
+              "008": (0.50, 0.48),
+              "009": (0.51, 0.48),
+              "010": (0.42, 0.50),
+              "011": (0.45, 0.50),
+              "012": (0.50, 0.55),
+              "013": (0.46, 0.45),
+              "014": (0.50, 0.55),
+              "015": (0.50, 0.48),
+              "016": (0.49, 0.56),
+              "017": (0.76, 0.50),
+              "018": (0.48, 0.50),
+              "019": (0.38, 0.48),
+              "020": (0.52, 0.48),
+              "021": (0.50, 0.50),
+          }
+
+          target_ratio = 4 / 5
+
+          def crop_4x5(im, fx, fy):
+              w, h = im.size
+              if w / h > target_ratio:
+                  crop_h = h
+                  crop_w = round(h * target_ratio)
+                  cx = fx * w
+                  left = round(cx - crop_w / 2)
+                  left = max(0, min(left, w - crop_w))
+                  box = (left, 0, left + crop_w, h)
+              else:
+                  crop_w = w
+                  crop_h = round(w / target_ratio)
+                  cy = fy * h
+                  top = round(cy - crop_h / 2)
+                  top = max(0, min(top, h - crop_h))
+                  box = (0, top, w, top + crop_h)
+              return im.crop(box)
+
+          thumbs = []
+          for key, (fx, fy) in focus.items():
+              src = root / f"{key}.jpg"
+              if not src.exists():
+                  raise FileNotFoundError(src)
+              with Image.open(src) as im:
+                  im = ImageOps.exif_transpose(im).convert("RGB")
+                  cropped = crop_4x5(im, fx, fy)
+                  final = cropped.resize((1080, 1350), Image.Resampling.LANCZOS)
+                  dst = out / f"{key}.jpg"
+                  final.save(dst, "JPEG", quality=95, subsampling=0, optimize=True)
+
+                  thumb = final.copy()
+                  thumb.thumbnail((216,270), Image.Resampling.LANCZOS)
+                  thumbs.append((key, thumb))
+
+          # Contact sheet para control visual.
+          cols = 5
+          cell_w, cell_h = 230, 300
+          rows = (len(thumbs) + cols - 1) // cols
+          sheet = Image.new("RGB", (cols*cell_w, rows*cell_h), "white")
+          draw = ImageDraw.Draw(sheet)
+          for i, (key, thumb) in enumerate(thumbs):
+              x = (i % cols)*cell_w + 7
+              y = (i // cols)*cell_h + 22
+              sheet.paste(thumb, (x,y))
+              draw.text((x,4 + (i // cols)*cell_h), key, fill="black")
+          sheet.save("public_media/cropped_4x5_contact.jpg", "JPEG", quality=90)
+          PY
+
+      - name: Commit crops
+        run: |
+          git config user.name "rcairspotter-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public_media/cropped_4x5 public_media/cropped_4x5_contact.jpg
+          if git diff --cached --quiet; then
+            echo "No crop changes."
+          else
+            git commit -m "media: add 4x5 Instagram crops"
+            git push
+          fi
+
+      - name: Upload crop review
+        uses: actions/upload-artifact@v4
+        with:
+          name: rcairspotter-crops-4x5
+          path: |
+            public_media/cropped_4x5/
+            public_media/cropped_4x5_contact.jpg
+          retention-days: 2
