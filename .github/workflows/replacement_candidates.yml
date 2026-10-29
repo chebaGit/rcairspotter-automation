@@ -9,7 +9,7 @@ on:
       - ".github/workflows/replacement_candidates.yml"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   review:
@@ -23,15 +23,69 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install Pillow
+        run: pip install pillow
+
       - name: Refresh iCloud queue
         run: python scripts/sync_icloud.py
 
       - name: Fetch candidates
         run: python scripts/fetch_preview_batch.py
 
-      - name: Upload candidates
+      - name: Build selected 4x5 replacements
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps
+
+          src = Path("preview_batch")
+          out = Path("public_media/replacements_2026_10_29")
+          out.mkdir(parents=True, exist_ok=True)
+
+          picks = {
+              "2026-10-30": ("14_*.jpg", 0.50, 0.50),
+              "2026-11-02": ("22_*.jpg", 0.55, 0.48),
+              "2026-11-09": ("12_*.jpg", 0.50, 0.50),
+              "2026-11-11": ("17_*.jpg", 0.50, 0.50),
+              "2026-11-13": ("05_*.jpg", 0.50, 0.50),
+          }
+
+          def crop_4x5(im, fx, fy):
+              w, h = im.size
+              target = 4/5
+              if w / h > target:
+                  cw = round(h * target)
+                  cx = fx * w
+                  left = max(0, min(round(cx - cw/2), w - cw))
+                  box = (left, 0, left + cw, h)
+              else:
+                  ch = round(w / target)
+                  cy = fy * h
+                  top = max(0, min(round(cy - ch/2), h - ch))
+                  box = (0, top, w, top + ch)
+              return im.crop(box)
+
+          for date, (pattern, fx, fy) in picks.items():
+              matches = list(src.glob(pattern))
+              if len(matches) != 1:
+                  raise RuntimeError(f"{date}: expected 1 match for {pattern}, got {len(matches)}")
+              with Image.open(matches[0]) as im:
+                  im = ImageOps.exif_transpose(im).convert("RGB")
+                  final = crop_4x5(im, fx, fy).resize((1080,1350), Image.Resampling.LANCZOS)
+                  final.save(out / f"{date}.jpg", "JPEG", quality=95, subsampling=0, optimize=True)
+          PY
+
+      - name: Commit replacements
+        run: |
+          git config user.name "rcairspotter-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public_media/replacements_2026_10_29
+          git commit -m "media: add five replacement posts" || echo "No changes"
+          git push
+
+      - name: Upload replacements
         uses: actions/upload-artifact@v4
         with:
-          name: rcairspotter-replacement-candidates
-          path: preview_batch/
+          name: rcairspotter-replacements
+          path: public_media/replacements_2026_10_29/
           retention-days: 2
