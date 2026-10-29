@@ -1,0 +1,37 @@
+name: Review fresh replacement candidates
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/replacement_candidates.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh iCloud queue
+        run: python scripts/sync_icloud.py
+
+      - name: Fetch candidates
+        run: python scripts/fetch_preview_batch.py
+
+      - name: Upload candidates
+        uses: actions/upload-artifact@v4
+        with:
+          name: rcairspotter-replacement-candidates
+          path: preview_batch/
+          retention-days: 2
