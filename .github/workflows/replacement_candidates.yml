@@ -84,9 +84,31 @@ jobs:
           git commit -m "media: add five replacement posts" || echo "No changes"
           git push
 
-      - name: Upload replacements
+      - name: Build candidate contact sheet
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps, ImageDraw
+          files=sorted(Path("preview_batch").glob("*.jpg"))
+          cols=5
+          cell_w,cell_h=250,210
+          rows=(len(files)+cols-1)//cols
+          sheet=Image.new("RGB",(cols*cell_w,rows*cell_h),"white")
+          draw=ImageDraw.Draw(sheet)
+          for i,f in enumerate(files):
+              with Image.open(f) as im:
+                  im=ImageOps.exif_transpose(im).convert("RGB")
+                  im.thumbnail((230,170),Image.Resampling.LANCZOS)
+                  x=(i%cols)*cell_w+10
+                  y=(i//cols)*cell_h+28
+                  sheet.paste(im,(x,y))
+                  draw.text((x,y-20),f.name[:2],fill="black")
+          sheet.save("preview_batch/contact.jpg","JPEG",quality=90)
+          PY
+
+      - name: Upload full candidate review
         uses: actions/upload-artifact@v4
         with:
-          name: rcairspotter-replacements
-          path: public_media/replacements_2026_10_29/
+          name: rcairspotter-next20-candidates
+          path: preview_batch/
           retention-days: 2
