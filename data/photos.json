@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-02T10:25:02.940900Z",
+  "updated_at": "2026-11-03T10:12:46.104241Z",
   "album_name": "Fotos CACh",
   "items_returned_by_icloud": "0",
-  "count": 2757,
+  "count": 2815,
   "photos": [
     {
       "photo_guid": "7B86DB5C-8055-4842-A7D7-96026CD344A9",
@@ -52383,6 +52383,1108 @@
         "width": 2304,
         "height": 1537,
         "file_size": 375909
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "AC335785-47F0-421A-8FB7-49FD53BA07B4",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:44:20Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "012ab4276fdda06a8c504c6b456cc06aa505a01f14",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 1378872
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "7A591728-473A-498B-95AC-4BC1972589C5",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:44:31Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01dafaa1fc78e8a855cf47b309b31dcdf0d66a35b1",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 1114159
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "BC16BA48-635A-4776-BBAC-91A3DCB61827",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:44:45Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01354c27a4db434172c6fce89b88b2b0ee485cc194",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 919017
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "605A07B7-282E-4BA7-8DC1-21A531530501",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:45:14Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01193858f05946186218322aa26dfece6e0450828f",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 1465502
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "C3952E44-41E1-4209-834B-A266FA7240EB",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:45:16Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01a6a41920ce6957a8f94469ba613888b97c86d5fa",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 1154133
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "F553A6E5-3788-4AD8-A26C-DABB02A48D15",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:45:18Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "017ce1643aad2b5e5e90a45b06c61ee3cf79a5bc7a",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 996951
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "092EBAB0-835B-4657-AE0F-E7EA2ECAA2D5",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:46:15Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "0103afe64a7afa24a8a28ccca0ebbf5433c84c11bd",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 434263
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "83B99F71-8A96-4403-AD2C-271A0CCEE6E0",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:46:15Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01998f21a8d9b4651a120c19bd906bba0c97b6f8a1",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 421084
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "20FFCB59-BCAE-45D8-9B78-7C36F2233F0D",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:46:16Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "016c531e6d797de5099df4c1e77da59a8f689f7be6",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 665997
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "E014A706-1169-43B7-8FF6-35769AEC75A4",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:46:16Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01699dabe404f9b0f27a9639345863dbdeeac5668f",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 569309
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "007160D3-DB38-4168-AD7B-46249FB62EF1",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:46:17Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01d60c7a8b67e226d0f95a08a35eb6fb0dedb14142",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 704244
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "170D6E3D-698F-42EA-B5C6-E5E587675D21",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:46:18Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "010e9c06b10a2d30db449f9e97a3bbb40f4f49eb5b",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 553671
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "6F9A0E6A-E385-43F1-8848-6DEC91A5C4EE",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:46:19Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "012f1a464c0cee9fe0ae227e2ea4dba9a709ab084d",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 466542
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "6392A126-EFCB-4349-83D2-E12415CF71BB",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:47:00Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "1537",
+      "height": "2304",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "0110c65a78877fa3fe7746a5e315e681421ab74d47",
+        "width": 1537,
+        "height": 2304,
+        "file_size": 410507
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "162DD5C9-866A-4F90-B86B-47030EF5AA5A",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:47:01Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "1537",
+      "height": "2304",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01e7874c4084640262103479efadf782f354be540f",
+        "width": 1537,
+        "height": 2304,
+        "file_size": 310909
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "C79EA485-FF95-4732-831A-B0B7AABC574C",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:47:27Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "1537",
+      "height": "2304",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "017fe71a01c66eb992ac9b02fca20ae30396508ad9",
+        "width": 1537,
+        "height": 2304,
+        "file_size": 606897
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "6FAAAFC6-1843-4D27-9328-867DDBC714BE",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:47:53Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "010e5bb48fda0764017e69c34ef56ef35b64daa776",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 399062
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "AC37C095-E00D-4AAB-9DB6-01BB0983C80E",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:48:12Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "019fc71e35385445f8d1961ecc55bac9b0e1085a33",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 386692
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "B7E5F313-7E78-49BE-9124-0F2EA563A5CD",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:49:18Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "010e88ab04602b2d458a192950a32b65f25ebefa87",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 553546
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "C73F1311-0A3A-47A6-BF1D-47B53424F642",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:49:18Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01fa1f60a162c70fbd6e5b31be7badf792c93992aa",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 519127
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "7F0103AB-1C2F-426B-8347-E87F1E98F781",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:49:19Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "012f5ab91ee87ba9ca5a9f748cce44616a7c174860",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 409706
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "F84ED68F-9673-424B-B33C-560330A835C8",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:49:26Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01c7ac56609e43e3acbd885986e56ef4544ec4b030",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 604262
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "7FC8A6F6-76CF-40EC-94BB-92B25F1CC75C",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:49:29Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "014989bda8daefa67beaeb6d896ee7678289dc2b29",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 348196
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "5E73509D-5857-46CF-B780-1ACA1E94DD0C",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:49:49Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "010c3209ab7ed7c69d866d79ef1b331e14ddc481cd",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 511525
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "C12B2527-74F0-489C-B626-2342F9834A7E",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:49:51Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "010ae3308643706015c39821f37640bc318812a098",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 1003922
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "0F5047A6-0282-417E-81EA-6BD4A640AE27",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:49:52Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "019e6f3ec96d1d68d105d5208afdd2818032f2aa60",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 1189621
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "0A44384F-072F-47BE-8179-253816EA60D0",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:49:53Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01536942b348d45a00839ec2e1edc75a41273e5e83",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 881285
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "69118538-B261-4A5A-8FA5-FE46520F890F",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:49:55Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01709064187e1f29b6c3bce6760bd3e405482a6aeb",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 938394
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "87F5498B-5AC0-4C57-AF33-C3A010D9A945",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:49:55Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "019e1b9dd0472cf08726239efe9913dc0845680e47",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 892140
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "C69B371F-905E-43B4-A0DB-2EEB62B3EB85",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:49:55Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "010e45881a48f7b97bc08cf6447dcdbd4fb10bba71",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 925166
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "71A3CC98-8794-49EB-A36D-99CB38155B64",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:49:56Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "015447b6029d41757c953d57839b6f26f91a428d69",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 849859
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "91F8724A-3CD3-41E3-91A5-7559FA7BF06E",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:49:56Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "0139146a8354ed2822f4cce25aa177552e71b73083",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 990880
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "33651A68-116E-4339-A8F3-4B45129201C5",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:50:11Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "017e43b719de781623cf074d8790904dd66d5f9b41",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 493820
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "F2BA20F8-11B4-479D-8284-57AEF6923413",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:50:16Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "016cc40168ff22475bdc32e5d2a0bd7ae6d4fb528c",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 408373
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "490CD8EE-5FA8-4475-938D-116E171D61B7",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:50:39Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01c09a0076e0cb9e81f6b64615e4cad5e09726ace3",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 309672
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "DB172B09-4B69-4A54-A071-F9AF6EC70E98",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:50:40Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "012df1018b6023a14d917f5844e8b656a7b84a6f24",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 280937
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "CC0CD6AB-4C27-4561-BA52-E1870F52E50F",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:50:41Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "0140d7d27d04050b1a032d14b6a46d686759b1e7a7",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 378755
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "FB02C3B8-3B13-4683-8839-A1B6B40518A3",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:50:41Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01d6184d108fdd104088189ffc3cf0e594f739cf70",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 385442
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "86408644-CE53-441E-86B7-9FB78F556641",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:50:42Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01bfb6d426c7aca8df7a7a37ae50e87b82ded5e01e",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 401479
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "9447C3A2-280B-4027-B157-CDC9E8A85AA5",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:50:42Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "0156f38ee8dc163907639d8ccd0efa3535fcbba809",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 404566
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "791DFB94-6C9C-47A5-B888-144951639494",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:51:25Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01425a1d0229a0a27cc6ab450afd811277b40adee8",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 300625
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "8EB522C0-C5E9-46B1-BEB0-08475126F214",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:51:27Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "019fd46a52f3fb335131d34dac41e1de901c678cc1",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 483114
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "FAC480DE-78C4-4014-922E-D364AEFB3CD4",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:51:27Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "0175871281351b4ccbce868269ee9d99e5f864744d",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 463486
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "A9A7BCB1-63E3-4618-A5C1-C6C533D697CD",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:51:28Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "014bf0c815023cb032cb51a159b2c082c5af2b86ff",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 541203
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "3666F00E-F421-4538-9DF0-9AE3181CA583",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:51:49Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "0147dabd9321d983588db87f15c5b1b52ee5d193b5",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 397063
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "865D88DB-57A9-47A8-87FB-DF50AF87154E",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:51:52Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "011c79cf73930b8c3fc7912b55b54d557829a2611d",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 348348
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "76EF3752-EE8D-47FE-B082-504282CD632F",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:52:12Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01030501f55bfac148ab15c6fdbbff58cba8e2e521",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 307759
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "38F81445-C4F1-46A5-BD4E-A2EE7202FC74",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:52:13Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "0193a9cf35ed5adb53950ee6ab03724df33bb414d9",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 363885
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "052324F5-F7E2-4AD4-A49B-7F1C6EDCC7C2",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:52:14Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01f57e07ce6b2975530a66d135ac53c18303b19a53",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 503725
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "17467EDC-E534-46E3-89BC-8841DBAC3141",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:52:14Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01f64973a0b753a2eef1a20757e3c386725c3b53ab",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 415129
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "F1EEBB86-1599-456B-9183-D1287150B4CD",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:52:14Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01835cb81c95f4d55ea19f15b004c66d306ada21bc",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 348344
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "A51120B2-A589-4E29-8827-D2EB3AFAEE60",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:52:15Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01de8d976d66b3997c3c514a4f81fec26ea1ca1bd7",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 424910
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "0FE97BE2-CE36-483C-B105-375942EC41A1",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:52:38Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01914ce2318ccc0e0edf1ded9700a9c62896ae8b10",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 325035
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "BEFDAEE4-AA44-4248-A7C3-890A67E7D385",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:53:07Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01b15d934f5c38631e75a56460d5674ce8932a06c3",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 448859
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "2C54F06E-E601-48E9-BD24-DB24F3516EA1",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:53:09Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01fc614bd13e265e4ec33091eb844270b48a0f8cf8",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 949891
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "E24D8A14-36F1-432E-8D36-F3B9DAAD6516",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:53:10Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "0127abcd92f92efa3d57b2c83a343130f74689b107",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 1004066
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "98335959-4FD0-4B34-A018-40F66B04F5B7",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:53:11Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "01458731682096807b9938bda7c2989ebd77ed12df",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 788315
+      },
+      "partition": "123",
+      "status": "available"
+    },
+    {
+      "photo_guid": "C5A5D95E-4FCC-45DF-8CC6-AD19EA493EEA",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "date_created": "2026-11-01T09:53:13Z",
+      "batch_date_created": "2026-11-03T01:58:20Z",
+      "caption": "",
+      "width": "2304",
+      "height": "1537",
+      "media_asset_type": "image",
+      "best_derivative": {
+        "key": "2304",
+        "checksum": "019232d2132717d5fa27423e0b844533a6e1c4c800",
+        "width": 2304,
+        "height": 1537,
+        "file_size": 1589287
       },
       "partition": "123",
       "status": "available"
