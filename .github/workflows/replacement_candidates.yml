@@ -1,5 +1,4 @@
-name: Review fresh replacement candidates
-# next20-batch
+name: Build next 20 rcairspotter posts
 
 on:
   workflow_dispatch:
@@ -13,7 +12,7 @@ permissions:
   contents: write
 
 jobs:
-  review:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -33,82 +32,76 @@ jobs:
       - name: Fetch candidates
         run: python scripts/fetch_preview_batch.py
 
-      - name: Build selected 4x5 replacements
+      - name: Build curated 4x5 posts
         run: |
           python - <<'PY'
           from pathlib import Path
           from PIL import Image, ImageOps
+          import json
 
-          src = Path("preview_batch")
-          out = Path("public_media/replacements_2026_10_29")
+          src=Path("preview_batch")
+          out=Path("public_media/next20_2026_11")
           out.mkdir(parents=True, exist_ok=True)
 
-          picks = {
-              "2026-10-30": ("14_*.jpg", 0.50, 0.50),
-              "2026-11-02": ("21_*.jpg", 0.50, 0.50),
-              "2026-11-09": ("12_*.jpg", 0.50, 0.50),
-              "2026-11-11": ("17_*.jpg", 0.50, 0.50),
-              "2026-11-13": ("05_*.jpg", 0.50, 0.50),
+          # Curated order: diverse aircraft/sessions, with repeats spaced apart.
+          order=[17,3,13,20,5,2,22,16,8,24,21,27,9,11,19,30,6,18,4,7]
+          focus={
+              17:(0.50,0.50), 3:(0.52,0.50), 13:(0.50,0.50), 20:(0.50,0.50),
+              5:(0.48,0.50), 2:(0.48,0.54), 22:(0.50,0.50), 16:(0.48,0.50),
+              8:(0.50,0.56), 24:(0.50,0.50), 21:(0.50,0.50), 27:(0.53,0.46),
+              9:(0.52,0.54), 11:(0.50,0.50), 19:(0.50,0.50), 30:(0.50,0.55),
+              6:(0.50,0.50), 18:(0.50,0.50), 4:(0.56,0.54), 7:(0.50,0.50)
           }
 
-          def crop_4x5(im, fx, fy):
-              w, h = im.size
-              target = 4/5
-              if w / h > target:
-                  cw = round(h * target)
-                  cx = fx * w
-                  left = max(0, min(round(cx - cw/2), w - cw))
-                  box = (left, 0, left + cw, h)
+          manifest=json.loads((src/"manifest.json").read_text())
+          by_index={x["index"]:x for x in manifest["items"]}
+
+          def crop45(im,fx,fy):
+              w,h=im.size
+              target=4/5
+              if w/h>target:
+                  cw=round(h*target)
+                  left=max(0,min(round(fx*w-cw/2),w-cw))
+                  box=(left,0,left+cw,h)
               else:
-                  ch = round(w / target)
-                  cy = fy * h
-                  top = max(0, min(round(cy - ch/2), h - ch))
-                  box = (0, top, w, top + ch)
+                  ch=round(w/target)
+                  top=max(0,min(round(fy*h-ch/2),h-ch))
+                  box=(0,top,w,top+ch)
               return im.crop(box)
 
-          for date, (pattern, fx, fy) in picks.items():
-              matches = list(src.glob(pattern))
-              if len(matches) != 1:
-                  raise RuntimeError(f"{date}: expected 1 match for {pattern}, got {len(matches)}")
-              with Image.open(matches[0]) as im:
-                  im = ImageOps.exif_transpose(im).convert("RGB")
-                  final = crop_4x5(im, fx, fy).resize((1080,1350), Image.Resampling.LANCZOS)
-                  final.save(out / f"{date}.jpg", "JPEG", quality=95, subsampling=0, optimize=True)
+          output=[]
+          for pos,idx in enumerate(order,1):
+              item=by_index[idx]
+              f=src/item["file"]
+              fx,fy=focus[idx]
+              with Image.open(f) as im:
+                  im=ImageOps.exif_transpose(im).convert("RGB")
+                  final=crop45(im,fx,fy).resize((1080,1350),Image.Resampling.LANCZOS)
+                  name=f"{pos:02d}.jpg"
+                  final.save(out/name,"JPEG",quality=95,subsampling=0,optimize=True)
+              output.append({
+                  "position":pos,
+                  "source_index":idx,
+                  "photo_guid":item["photo_guid"],
+                  "date_created":item.get("date_created"),
+                  "batch_guid":item.get("batch_guid"),
+                  "file":name
+              })
+
+          (out/"manifest.json").write_text(json.dumps({"items":output},indent=2)+"\n")
           PY
 
-      - name: Commit replacements
+      - name: Commit curated posts
         run: |
           git config user.name "rcairspotter-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add public_media/replacements_2026_10_29
-          git commit -m "media: add five replacement posts" || echo "No changes"
+          git add public_media/next20_2026_11
+          git commit -m "media: stage next 20 curated 4x5 posts" || echo "No changes"
           git push
 
-      - name: Build candidate contact sheet
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          from PIL import Image, ImageOps, ImageDraw
-          files=sorted(Path("preview_batch").glob("*.jpg"))
-          cols=5
-          cell_w,cell_h=250,210
-          rows=(len(files)+cols-1)//cols
-          sheet=Image.new("RGB",(cols*cell_w,rows*cell_h),"white")
-          draw=ImageDraw.Draw(sheet)
-          for i,f in enumerate(files):
-              with Image.open(f) as im:
-                  im=ImageOps.exif_transpose(im).convert("RGB")
-                  im.thumbnail((230,170),Image.Resampling.LANCZOS)
-                  x=(i%cols)*cell_w+10
-                  y=(i//cols)*cell_h+28
-                  sheet.paste(im,(x,y))
-                  draw.text((x,y-20),f.name[:2],fill="black")
-          sheet.save("preview_batch/contact.jpg","JPEG",quality=90)
-          PY
-
-      - name: Upload full candidate review
+      - name: Upload review artifact
         uses: actions/upload-artifact@v4
         with:
-          name: rcairspotter-next20-candidates
-          path: preview_batch/
+          name: rcairspotter-next20-final
+          path: public_media/next20_2026_11/
           retention-days: 2
