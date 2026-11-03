@@ -14,7 +14,7 @@ from fetch_next_photo import (
 
 BATCH_DIR = ROOT / "preview_batch"
 MANIFEST_PATH = BATCH_DIR / "manifest.json"
-BATCH_SIZE = 22
+BATCH_SIZE = 30
 
 
 def main():
