@@ -1,0 +1,164 @@
+{
+  "items": [
+    {
+      "position": 1,
+      "source_index": 17,
+      "photo_guid": "C5A5D95E-4FCC-45DF-8CC6-AD19EA493EEA",
+      "date_created": "2026-11-01T09:53:13Z",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "file": "01.jpg"
+    },
+    {
+      "position": 2,
+      "source_index": 3,
+      "photo_guid": "77BE9A35-E673-4CD2-BAA1-414B6BB758BE",
+      "date_created": "2026-10-17T10:56:01Z",
+      "batch_guid": "090B4406-BD15-414B-85F6-9A2FB3D8AFBF",
+      "file": "02.jpg"
+    },
+    {
+      "position": 3,
+      "source_index": 13,
+      "photo_guid": "2729CEE0-3050-4E99-9442-86B46FB8BCB0",
+      "date_created": "2026-04-04T13:19:06Z",
+      "batch_guid": "8718FFF8-010D-4CC3-A33A-6A62F1E1851D",
+      "file": "03.jpg"
+    },
+    {
+      "position": 4,
+      "source_index": 20,
+      "photo_guid": "E8ABB638-101B-4081-A94A-B606EAA47DC8",
+      "date_created": "2026-03-28T12:02:20Z",
+      "batch_guid": "8CA34B68-85D5-4586-BD61-E525D3D5F417",
+      "file": "04.jpg"
+    },
+    {
+      "position": 5,
+      "source_index": 5,
+      "photo_guid": "D1C4D715-4CF3-4462-A4AD-2FD6273C9201",
+      "date_created": "2026-10-25T14:23:43Z",
+      "batch_guid": "FC36FBD9-F785-4190-B5DD-1E036EA2A945",
+      "file": "05.jpg"
+    },
+    {
+      "position": 6,
+      "source_index": 2,
+      "photo_guid": "801876C5-0C23-4C45-B505-35715D90F287",
+      "date_created": "2026-10-17T11:17:12Z",
+      "batch_guid": "090B4406-BD15-414B-85F6-9A2FB3D8AFBF",
+      "file": "06.jpg"
+    },
+    {
+      "position": 7,
+      "source_index": 22,
+      "photo_guid": "80E1B182-105B-4C80-A9E4-02F61C02E59D",
+      "date_created": "2026-09-13T12:03:34Z",
+      "batch_guid": "EB907A14-5835-4265-AB38-21C9732144C6",
+      "file": "07.jpg"
+    },
+    {
+      "position": 8,
+      "source_index": 16,
+      "photo_guid": "FA902C0D-03D2-402D-8023-8EB468A469BA",
+      "date_created": "2026-03-15T13:27:36Z",
+      "batch_guid": "792AC7C0-D68A-4F49-96BD-DD3D86DC1DD1",
+      "file": "08.jpg"
+    },
+    {
+      "position": 9,
+      "source_index": 8,
+      "photo_guid": "385133B6-7B0F-44AC-93C9-1172F325CCEA",
+      "date_created": "2026-10-17T11:02:51Z",
+      "batch_guid": "090B4406-BD15-414B-85F6-9A2FB3D8AFBF",
+      "file": "09.jpg"
+    },
+    {
+      "position": 10,
+      "source_index": 24,
+      "photo_guid": "D2A2C0AA-B063-48CE-BF0E-D76B0AEFEA90",
+      "date_created": "2026-10-17T12:09:57Z",
+      "batch_guid": "090B4406-BD15-414B-85F6-9A2FB3D8AFBF",
+      "file": "10.jpg"
+    },
+    {
+      "position": 11,
+      "source_index": 21,
+      "photo_guid": "9447C3A2-280B-4027-B157-CDC9E8A85AA5",
+      "date_created": "2026-11-01T09:50:42Z",
+      "batch_guid": "AAC177A5-5664-464E-A3B4-0EE9384A7D9E",
+      "file": "11.jpg"
+    },
+    {
+      "position": 12,
+      "source_index": 27,
+      "photo_guid": "482E2A7D-4350-42E2-85F4-49551EDF4698",
+      "date_created": "2024-03-31T11:31:36Z",
+      "batch_guid": "978A6FEF-88C0-4FF0-8A6C-CFF74ECA5957",
+      "file": "12.jpg"
+    },
+    {
+      "position": 13,
+      "source_index": 9,
+      "photo_guid": "37E1EF24-43AC-46B0-AB2A-124A24BB89B0",
+      "date_created": "2026-10-17T11:34:25Z",
+      "batch_guid": "090B4406-BD15-414B-85F6-9A2FB3D8AFBF",
+      "file": "13.jpg"
+    },
+    {
+      "position": 14,
+      "source_index": 11,
+      "photo_guid": "A709CC17-85E4-44AF-BB01-30DCDBC0D711",
+      "date_created": "2026-05-28T16:41:16Z",
+      "batch_guid": "4FC82277-B512-4BF6-81BD-7B7BC400D038",
+      "file": "14.jpg"
+    },
+    {
+      "position": 15,
+      "source_index": 19,
+      "photo_guid": "0B2E7299-5FAC-4C13-9CD2-79A6D1EEF782",
+      "date_created": "2026-03-15T13:27:58Z",
+      "batch_guid": "792AC7C0-D68A-4F49-96BD-DD3D86DC1DD1",
+      "file": "15.jpg"
+    },
+    {
+      "position": 16,
+      "source_index": 30,
+      "photo_guid": "5D71C9E5-945C-4579-ACFF-DD52C4D7EC26",
+      "date_created": "2021-08-01T20:37:07Z",
+      "batch_guid": "76E513D4-6D8C-4CEB-82D9-971CD4613A0F",
+      "file": "16.jpg"
+    },
+    {
+      "position": 17,
+      "source_index": 6,
+      "photo_guid": "6B13EBCB-A6E2-48D2-8D2C-4BBF7D6A4B30",
+      "date_created": "2026-04-04T11:31:41Z",
+      "batch_guid": "8718FFF8-010D-4CC3-A33A-6A62F1E1851D",
+      "file": "17.jpg"
+    },
+    {
+      "position": 18,
+      "source_index": 18,
+      "photo_guid": "2785C22B-A441-4FA9-B9AD-2230426F3E46",
+      "date_created": "2026-05-28T16:44:11Z",
+      "batch_guid": "4FC82277-B512-4BF6-81BD-7B7BC400D038",
+      "file": "18.jpg"
+    },
+    {
+      "position": 19,
+      "source_index": 4,
+      "photo_guid": "3F59C760-5900-4375-B146-286E6FDC22C0",
+      "date_created": "2026-08-23T11:13:35Z",
+      "batch_guid": "46CABAEA-476A-4250-A397-D315837705B6",
+      "file": "19.jpg"
+    },
+    {
+      "position": 20,
+      "source_index": 7,
+      "photo_guid": "ED17F2FA-17D5-4B7D-9DBC-D71FC2EAE401",
+      "date_created": "2026-03-28T11:57:02Z",
+      "batch_guid": "8CA34B68-85D5-4586-BD61-E525D3D5F417",
+      "file": "20.jpg"
+    }
+  ]
+}
